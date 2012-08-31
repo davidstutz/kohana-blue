@@ -1,3 +1,3 @@
-# Markdown
+# Blue
 
-This module is a simple wrapper for the Markdown implementation for PHP by Michel Fortin.
+Blue is a user configuration module based on Kohana's [Red](https://github.com/Phrax1337/kohana-red) module.
