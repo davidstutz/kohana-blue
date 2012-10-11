@@ -4,7 +4,7 @@
  * 
  * @package		Blue
  * @author		David Stutz
- * @since		1.0.0
  * @copyright	(c) 2012 David Stutz
+ * @license		http://opensource.org/licenses/bsd-3-clause
  */
 class Model_User_Config extends Model_Blue_User_Config {}
