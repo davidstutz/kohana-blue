@@ -1,36 +1,29 @@
 # Usage
 
-## Singleton
+## Reading
 
-Blue is implemented as singleton:
+To load a configturation key of the currently logged in user:
 
-	Blue::instance()->some_method();
-
-## Configuration Loading
-
-To load a configturation key of the currently logged user:
-
-	// $key should be lower case without any special characters for simplicity.
-	Blue::instance()->load($key);
+	// $group and $key should be lower case without any special characters for simplicity.
+	Blue::instance()->load($group, $key);
 	
 	// If the configuration key is not found in the database the default value NULL is returned.
-	// An alternaitve default value can be specified with the second parameter:
-	$value = Blue::instance($key, $default);
+	// An alternative default value can be specified with the third parameter:
+	$value = Blue::instance->load($group, $key, $default);
 	if ($value == $default)
 	{
 		// Key could not be found in the database for the current user.
 	}
 	
-	$array = Blue::instance()->load($key, array());
+	$array = Blue::instance()->load($group, $key, array());
 	// The foreach loop will not throw any exception:
 	foreach ($array as $value)
 	{
 		// Do some awesome stuff ...
 	}
 
-## Configuration Saving
+## Writing
 
-To save a configuration value to a given key for the current logged in user:
+To save a configuration value to a given group and key for the current logged in user:
 
-	// Saves $value to $key for the current user:
-	Blue::instance()->set($key, $value);
+	Blue::instance()->write($group, $key, $value);

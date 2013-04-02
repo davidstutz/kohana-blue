@@ -6,6 +6,7 @@
 	CREATE  TABLE `user_config` (
 	  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
 	  `user_id` INT(11) UNSIGNED NOT NULL ,
+	  `group` VARCHAR(255) NOT NULL ,
 	  `key` VARCHAR(255) NOT NULL ,
 	  `value` TEXT NOT NULL ,
 	  PRIMARY KEY (`id`) ,

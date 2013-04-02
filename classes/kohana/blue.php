@@ -50,20 +50,21 @@ class Kohana_Blue
 	 * @param	string	key
 	 * @param	string	default
 	 */
-	public function load($key, $default = NULL)
+	public function load($group, $key, $default = NULL)
 	{
-		$config = ORM::factory('user_config', array('user_id' => Red::instance()->get_user()->id, 'key' => $key));
+		$config = ORM::factory('user_config')->where('user_id', '=', Red::instance()->get_user()->id)->and_where('group', '=', $group)->and_where('key', '=', $key)->find();
 		
 		if (!$config->loaded())
 		{
 			return $default;
 		}
 		
-		if (FALSE !== ($value = unserialize($config->value)))
+		try
 		{
-			return $value;
+			return unserialize($config->value);
 		}
-		else {
+		catch (ErrorException $e)
+		{
 			return $default;
 		}
 	}
@@ -74,13 +75,14 @@ class Kohana_Blue
 	 * @param	string	key
 	 * @param	mixed	value
 	 */
-	public function set($key, $value)
+	public function write($group, $key, $value)
 	{
-		$config = ORM::factory('user_config', array('user_id' => Red::instance()->get_user()->id, 'key' => $key));
+		$config = ORM::factory('user_config')->where('user_id', '=', Red::instance()->get_user()->id)->and_where('group', '=', $group)->and_where('key', '=', $key)->find();
 		
 		if (!$config->loaded())
 		{
 			$config->user = Red::instance()->get_user();
+			$config->group = $group;
 			$config->key = $key;
 		}
 		

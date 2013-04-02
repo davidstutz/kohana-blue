@@ -1,3 +1,3 @@
 # Blue
 
-Blue is a user configuration module based on Kohana's [Red](https://github.com/Phrax1337/kohana-red) module.
+Blue is a user configuration module based on Kohana's [Red](https://github.com/davidstutz/kohana-red) module.
