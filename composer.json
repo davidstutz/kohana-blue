@@ -1,0 +1,27 @@
+{
+    "name": "davidstutz/kohana-blue",
+    "type": "kohana-module",
+    "description": "User configuration module based on kohana-red.",
+    "homepage": "https://davidstutz.de",
+    "license": "BSD-3-Clause",
+    "keywords": ["kohana", "framework", "configuration"],
+    "authors": [
+        {
+            "name": "David Stutz",
+            "email": "davidstutz@web.de",
+            "homepage": "https://davidstutz.de",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/davidstutz/kohana-blue",
+        "source": "http://github.com/davidstutz/kohana-blue"
+    },
+    "require": {
+        "composer/installers": "~1.0",
+        "php": ">=5.3.3",
+        "kohana/core": ">=3.3",
+        "kohana/orm": ">=3.3",
+        "davidstutz/kohana-red": "dev-master"
+    }
+}
