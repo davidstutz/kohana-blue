@@ -8,7 +8,11 @@ Blue is part of a set of Kohana modules:
 * [Blue](https://github.com/davidstutz/kohana-blue): Red based user configuration module.
 * [Yellow](https://github.com/davidstutz/kohana-yellow): Green based logging solution.
 
-For documentation see the guide/ subfolder or use Kohana's [Userguide](https://github.com/kohana/userguide) module.
+For documentation see the `guide/` subfolder or use Kohana's [Userguide](https://github.com/kohana/userguide) module.
+
+**Note to use the proper SQL schema as can be found in `guide/blue/sql-schema.md` or `schema.sql`.**
+
+A demonstration application using Blue can be found at [davidstutz/kohana-demo](https://github.com/davidstutz/kohana-demo).
 
 ## Composer
 
@@ -33,7 +37,7 @@ Installation via composer:
 
 ## License
 
-Copyright (c) 2013 - 2014 David Stutz
+Copyright (c) 2013 - 2016 David Stutz
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
